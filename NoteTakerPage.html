@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="C:\Users\JuanM\Documents\Practice Projects\NoteTakerPage\styles.css">
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="C:\Bootstrap\bootstrap-3.3.7-dist\js"></script>
+
+        <script src="jquery-3.2.1.min.js"></script>
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="https://code.angularjs.org/2.0.0-beta.9/angular2.min.js"></script>
+        <script src="https://code.angularjs.org/2.0.0-beta.9/angular2.js"></script>
+        <script type="text/javascript">
+            console.log("angular object", angular);
+        </script>
+        
+        <!--Place any jQuery here to further customize events and more dynamic UI-->
+        <script>
+    
+
+            $(document).ready(function(){
+                $("#addNote").prop('checked', true) 
+                {
+                
+                    $("#getNote").prop('checked', false);
+                    $("#getAllNotes").prop('checked', false);
+                }
+                
+                $("#getNote").prop('checked', true) 
+                {
+                
+                    $("#addNote").prop('checked', false);
+                    $("#getAllNotes").prop('checked', false);
+                }
+
+                $("#getAllNotes").prop('checked', true) 
+                {
+                
+                    $("#getNote").prop('checked', false);
+                    $("#addNote").prop('checked', false);
+                }
+                
+            });
+        </script>
+    </head>
+    <body ng-app="noteTakerApp.js">
+        <div class="jumbotron">
+            <h1 class="display-3">Note Taker</h1>
+            <p class="lead">The simple WEB API for organizing notes.</p>
+            <hr class="my-2">
+            <p>More information</p>
+            <p class="lead">
+                <a class="btn btn-primary btn-sm" href="...\Website\Resources.html" role="button">View Resources</a>
+            </p>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8">
+                    <p>
+                        **The result of the notes will appear under the result title. (Allow for further design and customization of the result or HTTP Response)**
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <p>**Some type of search content and response status should appear here**</p>
+                </div>
+            </div>
+
+        </div>
+   <br>
+
+
+
+
+
+
+
+
+
+
+
+    </br>
+
+<!--Main functionality for submitting and requesting a note-->
+    <div class=Main>
+        <h1>Note Taker API 1.0</h1>
+        <div class="container">
+            <div class="row">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class=col-lg-4>
+                                
+                                    <div id=addNote>
+                                        <h4>Note Contents</h4><br>
+                                        <p><input class="btn btn-default" type="submit" value="Submit"><input type="text" ng-model="addNote"></p>  
+                                        <textarea rows="8" cols="45">{{addNote}}</textarea>
+                                    </div>
+
+                                    <div id=addNoteList class="list">
+                                        <h5>Note List</h5>
+                                        <table ng-app="noteTakerApp" ng-controller="noteCtrl" border=1>
+                                            <tbody>
+                                                <tr ng-repeat="note in records">
+                                                <td>{{note.id}}</td>
+                                                <td>{{note.body}}</td>   
+                                            </tr>
+                                            </tbody>
+                                        </table>                                    
+                                    </div>
+                                
+                            </div>
+                        
+                    <br>
+                            <div class=col-lg-4>
+                                <div class="form">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            
+                                            
+                                                    <p>Get Note</p><input type="checkbox" class="form-check-input" name="GetNote" id="getNote" checked="checked" autocomplete="off">
+                                            
+                                                
+                                                    <p>Add Note</p><input type="checkbox" name="AddNote" id="addNote" autocomplete="off">
+                                                
+                                            
+                                                    <p>Get All Notes</p><input type="checkbox" name="GetAllNotes" id="getallNotes" value="Get All Notes" autocomplete="off">
+                                                
+                                            
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-8">
+                    For any concerns or questions contact support.
+                </div>
+                <div class="col-sm-4">
+                        <address>
+                                <p><a href="mailto:Juan.M.Davila.Jr@hotmail.com">Contact Support</a></p>
+                        </address>
+                </div>
+            </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    <script src="...\Website\noteTakerApp/event/eventModule.js"></script>
+    <script src="...\Website\noteTakerApp.js"></script>
+    <script src="./app/angular.min.js"></script>
+</body>
+</HTML>

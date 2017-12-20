@@ -1,0 +1,59 @@
+
+
+.jumbotron {
+
+    color:inherit;
+    background-color: darkgoldenrod !important;
+
+}
+
+
+
+.display-3 {
+
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+}
+
+p {
+    
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 150%;
+
+}
+
+body {
+
+        background-color: lightcyan;
+}
+
+h1 {
+
+    font-family:  'Times New Roman', Times, serif;
+}
+
+h3 {
+
+    font-family:  Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+}
+
+h4
+{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h5
+{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+table{
+     border-block-end-style: double;
+     border-bottom-color:darkgoldenrod; 
+}
+
+textarea
+{
+    border-block-end-style: double;
+    border-bottom-color:darkgoldenrod;
+}
+
